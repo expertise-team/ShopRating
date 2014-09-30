@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopRating", "ShopRating\ShopRating.csproj", "{A2227D3B-A003-47BF-A6A1-3D7A45E269A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopRating.Core", "ShopRating.Core\ShopRating.Core.csproj", "{B7911802-38F7-4643-8FD7-E64B06638AFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopRating.Service", "ShopRating.Service\ShopRating.Service.csproj", "{D90EC4B9-9DE9-43E0-900E-689827E4BB2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2227D3B-A003-47BF-A6A1-3D7A45E269A3}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{A2227D3B-A003-47BF-A6A1-3D7A45E269A3}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{A2227D3B-A003-47BF-A6A1-3D7A45E269A3}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{A2227D3B-A003-47BF-A6A1-3D7A45E269A3}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{A2227D3B-A003-47BF-A6A1-3D7A45E269A3}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{A2227D3B-A003-47BF-A6A1-3D7A45E269A3}.Debug|iPhone.Build.0 = Debug|iPhone
+		{A2227D3B-A003-47BF-A6A1-3D7A45E269A3}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{A2227D3B-A003-47BF-A6A1-3D7A45E269A3}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{A2227D3B-A003-47BF-A6A1-3D7A45E269A3}.Release|iPhone.ActiveCfg = Release|iPhone
+		{A2227D3B-A003-47BF-A6A1-3D7A45E269A3}.Release|iPhone.Build.0 = Release|iPhone
+		{A2227D3B-A003-47BF-A6A1-3D7A45E269A3}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{A2227D3B-A003-47BF-A6A1-3D7A45E269A3}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{B7911802-38F7-4643-8FD7-E64B06638AFD}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{B7911802-38F7-4643-8FD7-E64B06638AFD}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{B7911802-38F7-4643-8FD7-E64B06638AFD}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{B7911802-38F7-4643-8FD7-E64B06638AFD}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{B7911802-38F7-4643-8FD7-E64B06638AFD}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{B7911802-38F7-4643-8FD7-E64B06638AFD}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{B7911802-38F7-4643-8FD7-E64B06638AFD}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{B7911802-38F7-4643-8FD7-E64B06638AFD}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{B7911802-38F7-4643-8FD7-E64B06638AFD}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{B7911802-38F7-4643-8FD7-E64B06638AFD}.Release|iPhone.Build.0 = Release|Any CPU
+		{B7911802-38F7-4643-8FD7-E64B06638AFD}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{B7911802-38F7-4643-8FD7-E64B06638AFD}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{D90EC4B9-9DE9-43E0-900E-689827E4BB2E}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{D90EC4B9-9DE9-43E0-900E-689827E4BB2E}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{D90EC4B9-9DE9-43E0-900E-689827E4BB2E}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{D90EC4B9-9DE9-43E0-900E-689827E4BB2E}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{D90EC4B9-9DE9-43E0-900E-689827E4BB2E}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{D90EC4B9-9DE9-43E0-900E-689827E4BB2E}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{D90EC4B9-9DE9-43E0-900E-689827E4BB2E}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{D90EC4B9-9DE9-43E0-900E-689827E4BB2E}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{D90EC4B9-9DE9-43E0-900E-689827E4BB2E}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{D90EC4B9-9DE9-43E0-900E-689827E4BB2E}.Release|iPhone.Build.0 = Release|Any CPU
+		{D90EC4B9-9DE9-43E0-900E-689827E4BB2E}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{D90EC4B9-9DE9-43E0-900E-689827E4BB2E}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = ShopRating\ShopRating.csproj
+	EndGlobalSection
+EndGlobal
