@@ -3,35 +3,47 @@ using System.Collections.Generic;
 using SQLite.Net;
 using SQLite.Net.Interop;
 using System.Linq;
+using ShopRating.Core.Contracts;
+using ShopRating.Core.Models;
+using System.Threading.Tasks;
+using SQLite.Net.Async;
 
 namespace ShopRating.Core
 {
 	public class SQLiteVisitRepository: IVisitRepository
 	{
-		readonly SQLiteConnection db;
+		readonly SQLiteConnectionWithLock connection;
 
 		public SQLiteVisitRepository (ISQLitePlatform sqliteplatform)
 		{
-			db = new SQLiteConnection (sqliteplatform, "shoprating.db3");
-			db.CreateTable<Visit> ();
-			if (db.Table<Visit> ().Count () == 0) {
-				db.InsertAll (InMemoryDB.GetVisitTable ());
-			}
+			connection = new SQLiteConnectionWithLock (sqliteplatform, new SQLiteConnectionString ("shoprating.db3", false));
 		}
 
 		#region IVisitRepository implementation
 
-		public IDictionary<DateTime, List<Visit>> GetVisits (string username, string status)
+		public async Task<IDictionary<DateTime, List<Visit>>> GetVisitsAsync (string username, string status)
 		{
-			var table = db.Table<Visit> ().Where (v => v.UserName == username && v.Status == status);
-			var result = table
+			IDictionary<DateTime, List<Visit>> result;
+
+			var db = new SQLiteAsyncConnection (() => connection);
+
+			await db.CreateTableAsync<Visit> ();
+
+			// for demo
+			if (await db.Table<Visit> ().CountAsync () == 0) {
+				await db.InsertAllAsync (InMemoryDB.GetVisitTable ());
+			}
+
+			var table = await db.Table<Visit> ().Where (v => v.UserName == username && v.Status == status).ToListAsync ();
+
+			result = table
 				.GroupBy (v => v.PlanDate)
 				.OrderBy (p => p.Key)
 				.ToDictionary (g => g.Key, g => g.ToList ());
+
 			return result;
 		}
 
 		#endregion
 	}
 }
-

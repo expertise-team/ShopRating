@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ShopRating.Core.Contracts;
+using ShopRating.Core.Models;
+using System.Threading.Tasks;
 
 namespace ShopRating.Core
 {
@@ -9,17 +12,20 @@ namespace ShopRating.Core
 
 		#region IVisitRepository implementation
 
-		public IDictionary<DateTime, List<Visit>> GetVisits (string username, string status)
+		public async Task<IDictionary<DateTime, List<Visit>>> GetVisitsAsync (string username, string status)
 		{
+			IDictionary<DateTime, List<Visit>> result = null;
 
-			var result = InMemoryDB.GetVisitTable (username, status)
-				.GroupBy (v => v.PlanDate)
-				.OrderBy (p => p.Key)
-				.ToDictionary (g => g.Key, g => g.ToList ());
+			await Task.Run (() => {
+				result = InMemoryDB.GetVisitTable (username, status)
+					.GroupBy (v => v.PlanDate)
+					.OrderBy (p => p.Key)
+					.ToDictionary (g => g.Key, g => g.ToList ());
+			});
+				
 			return result;
 		}
 
 		#endregion
 	}
 }
-
